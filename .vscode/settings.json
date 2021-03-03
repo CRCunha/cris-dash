@@ -1,0 +1,80 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#5b61e3",
+    "activityBar.activeBorder": "#ec9296",
+    "activityBar.background": "#5b61e3",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#ec9296",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#3037db",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#5b61e3",
+    "titleBar.activeBackground": "#3037db",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#3037db99",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "bookmarks.lineBackground": "#5b61e325",
+    "bookmarks.lineBorder": "#5b61e325",
+    "bookmarks.overviewRuler": "#5b61e325"
+  },
+  "workbench.sideBar.location": "left",
+  "glassit.alpha": 245,
+  "peacock.color": "#3037db",
+  "color-highlight.enable": true,
+  "editor.wordWrap": "on",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "git.autofetch": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[latex]": {
+    "editor.defaultFormatter": "nickfo/*/de.latex-formatter"
+  },
+  "search.exclude": {
+    "**/assets": true
+  },
+  "bookmarks.showCommandsInContextMenu": true,
+  "bookmarks.navigateThroughAllFiles": true,
+  "bookmarks.wrapNavigation": true,
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+
+  "editor.renderWhitespace": "none",
+  // "window.titleBarStyle": "custom",
+  "editor.formatOnSave": true,
+  // "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    // For ESLint
+    "source.fixAll.tslint": true,
+    // For Stylelint
+    "source.fixAll.stylelint": true
+  },
+  // "jshint.options": {
+  //   "esversion": 6
+  // },
+  "python.linting.flake8Enabled": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "php": "html"
+  },
+"editor.fontFamily": "Fira Code",
+"editor.fontLigatures": true
+  "workbench.iconTheme": "material-icon-theme",
+  "prettier.useEditorConfig": false,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "always",
+
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.parameterHints.enabled": false,
+  "breadcrumbs.enabled": true,
+  "javascript.suggest.autoImports": false
+}
