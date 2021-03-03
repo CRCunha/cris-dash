@@ -16,6 +16,10 @@ const useStyles = makeStyles(() => ({
     height: 250,
     borderRadius: 10,
     boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
+    backgroundSize: '60%',
+    backgroundPositionX: '100%',
+    backgroundPositionY: '-2%',
+    backgroundRepeat: 'no-repeat',
   },
 }));
 
