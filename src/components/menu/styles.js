@@ -12,14 +12,14 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'center',
     alignItems: 'flex-end',
     '& img': {
-      width: '65%',
+      width: '60%',
     },
   },
   menuItensContainer: {
     marginTop: 30,
   },
   menuIten: {
-    height: 60,
+    height: 55,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => ({
     cursor: 'pointer',
   },
   menuItenIcon: {
-    fontSize: 30,
+    fontSize: 28,
     width: '100%',
   },
 }));

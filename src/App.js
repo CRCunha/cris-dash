@@ -1,13 +1,16 @@
 import React from 'react';
+import { Grid } from '@material-ui/core';
 
 // Impor Components
 import Menu from './components/menu';
+import GridComponent from './components/grid';
 
 function App() {
   return (
-    <div>
+    <Grid container>
       <Menu />
-    </div>
+      <GridComponent />
+    </Grid>
   );
 }
 

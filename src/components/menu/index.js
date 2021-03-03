@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import useStyles from './styles';
 
-export default function AdminBreadcrumb() {
+export default function Menu() {
   const classes = useStyles();
 
   return (
@@ -17,7 +17,7 @@ export default function AdminBreadcrumb() {
         </Grid>
         <Grid item xs={12} className={classes.menuItensContainer}>
           <Grid container justify="center">
-            <Grid item xs={9} className={classes.menuIten}>
+            <Grid item xs={8} className={classes.menuIten}>
               <HomeRoundedIcon className={classes.menuItenIcon} />
             </Grid>
           </Grid>
