@@ -16,8 +16,7 @@ function App() {
       <Routes />
       <Snackbar
         open={appStates.snackbar.active}
-        autoHideDuration={8000}
-        onClose={() => dispatch(AppActions.closeSnackbar())}
+        autoHideDuration={appStates.snackbar.duration}
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
         <Alert

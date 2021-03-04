@@ -1,7 +1,7 @@
 /* SNACKBAR */
 
-export const openSnackbar = (message, severity) => {
-  return { type: '@app/OPEN_SNACKBAR', message, severity };
+export const openSnackbar = (message, severity, duration) => {
+  return { type: '@app/OPEN_SNACKBAR', message, severity, duration };
 };
 
 export const closeSnackbar = () => {

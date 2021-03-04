@@ -5,6 +5,7 @@ const initialState = {
     message: '',
     active: false,
     severity: 'error',
+    duration: null,
   },
   openModalUser: false,
 };
@@ -22,6 +23,7 @@ export default function app(state = initialState, action) {
           active: true,
           message: action.message,
           severity: action.severity,
+          duration: action.duration,
         };
       });
 

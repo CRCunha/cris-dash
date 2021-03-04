@@ -33,7 +33,8 @@ export default function Menu() {
                 dispatch(
                   AppActions.openSnackbar(
                     'Você não é um usuário cadastrado',
-                    'error'
+                    'warning',
+                    null
                   )
                 )
               }
