@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Alert from '@material-ui/lab/Alert';
 import Routes from './components/routes';
 import * as AppActions from './store/modules/app/actions';
-
+import ModalLogin from './components/modalLogin';
 import './App.css';
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
           <Typography>{appStates.snackbar.message}</Typography>
         </Alert>
       </Snackbar>
+      <ModalLogin />
     </Grid>
   );
 }

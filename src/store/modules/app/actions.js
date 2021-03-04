@@ -10,10 +10,10 @@ export const closeSnackbar = () => {
 
 /* MODAL USER */
 
-export const openModalUser = () => {
-  return { type: '@app/OPEN_MODAL_USER' };
+export const openModalLogin = () => {
+  return { type: '@app/OPEN_MODAL_LOGIN' };
 };
 
-export const closeModalUser = () => {
-  return { type: '@app/CLOSE_MODAL_USER' };
+export const closeModalLogin = () => {
+  return { type: '@app/CLOSE_MODAL_LOGIN' };
 };

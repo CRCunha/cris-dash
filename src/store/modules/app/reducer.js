@@ -7,7 +7,7 @@ const initialState = {
     severity: 'error',
     duration: null,
   },
-  openModalUser: false,
+  open: false,
 };
 
 /**
@@ -35,14 +35,14 @@ export default function app(state = initialState, action) {
         };
       });
 
-    case '@app/OPEN_MODAL_USER':
+    case '@app/OPEN_MODAL_LOGIN':
       return produce(state, (draft) => {
-        draft.openModalUser = true;
+        draft.open = true;
       });
 
-    case '@app/CLOSE_MODAL_USER':
+    case '@app/CLOSE_MODAL_LOGIN':
       return produce(state, (draft) => {
-        draft.openModalUser = false;
+        draft.open = false;
       });
 
     default:
