@@ -2,11 +2,15 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import * as AppActions from '../../store/modules/app/actions';
 import useStyles from './styles';
 
 export default function Menu() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const userStates = useSelector((state) => state.user, []);
 
   return (
     <div className={classes.menuContainer}>
@@ -25,11 +29,24 @@ export default function Menu() {
               </Grid>
             </Link>
 
-            <Link to="/user" className={classes.menuLink}>
-              <Grid item xs={8} className={classes.menuIten}>
+            {userStates.user.logged ? (
+              <Link to="/user" className={classes.menuLink}>
+                <Grid item xs={8} className={classes.menuIten}>
+                  <PersonRoundedIcon className={classes.menuItenIcon} />
+                </Grid>
+              </Link>
+            ) : (
+              <Grid
+                onClick={() => {
+                  dispatch(AppActions.openModalLogin());
+                }}
+                item
+                xs={8}
+                className={classes.menuIten}
+              >
                 <PersonRoundedIcon className={classes.menuItenIcon} />
               </Grid>
-            </Link>
+            )}
           </Grid>
         </Grid>
       </Grid>

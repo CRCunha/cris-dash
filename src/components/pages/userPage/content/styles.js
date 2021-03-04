@@ -13,6 +13,23 @@ const useStyles = makeStyles(() => ({
 
     marginTop: 50,
   },
+  cardAvatarItemAvatar: {
+    height: 220,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+  cardAvatarItemName: {
+    height: 100,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  avatar: {
+    width: 120,
+    height: 120,
+    fontSize: 30,
+  },
 }));
 
 export default useStyles;
