@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <Grid container className="content">
+    <Grid container style={{ flexWrap: 'no-wrap' }}>
       <Routes />
     </Grid>
   );

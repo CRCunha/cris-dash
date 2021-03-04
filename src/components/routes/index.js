@@ -8,11 +8,19 @@ import UserPage from '../pages/userPage';
 
 const Routes = () => (
   <BrowserRouter>
-    <Menu />
-    <Switch>
-      <Route path="/" exact component={HomePage} />
-      <Route path="/user" exact component={UserPage} />
-    </Switch>
+    <div
+      style={{
+        width: '100vw',
+        display: 'flex',
+        flexWrap: 'no-wrap',
+      }}
+    >
+      <Menu />
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/user" exact component={UserPage} />
+      </Switch>
+    </div>
   </BrowserRouter>
 );
 
