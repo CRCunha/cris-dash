@@ -33,6 +33,11 @@ const useStyles = makeStyles(() => ({
     fontSize: 28,
     width: '100%',
   },
+  menuLink: {
+    marginBottom: 20,
+    display: 'flex',
+    justifyContent: 'center',
+  },
 }));
 
 export default useStyles;

@@ -1,15 +1,12 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-
-// Impor Components
-import Menu from './components/menu';
-import GridComponent from './components/grid';
+import Routes from './components/routes';
+import './App.css';
 
 function App() {
   return (
-    <Grid container>
-      <Menu />
-      <GridComponent />
+    <Grid container style={{ flexWrap: 'no-wrap' }}>
+      <Routes />
     </Grid>
   );
 }
