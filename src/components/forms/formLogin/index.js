@@ -16,8 +16,11 @@ export default function ModalLogin() {
   const sendRequest = (formData) => {
     setLoading(formData);
     dispatch(AppActions.closeModalLogin());
-    dispatch(UserActions.setUser());
+    dispatch(UserActions.setUserLogged());
     dispatch(AppActions.closeSnackbar());
+    dispatch(
+      AppActions.openSnackbar('Login Efetuado Com Sucesso', 'success', 8000)
+    );
     setLoading(false);
   };
 

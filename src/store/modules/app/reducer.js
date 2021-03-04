@@ -5,7 +5,7 @@ const initialState = {
     message: '',
     active: false,
     severity: 'error',
-    duration: null,
+    duration: 8000,
   },
   open: false,
 };

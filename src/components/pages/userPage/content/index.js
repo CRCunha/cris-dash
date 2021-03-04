@@ -9,7 +9,7 @@ export default function Content() {
   const userStates = useSelector((state) => state.user, []);
 
   // eslint-disable-next-line no-console
-  // console.log('teste', userStates);
+  console.log('teste', userStates);
 
   return (
     <div>

@@ -11,13 +11,11 @@ const initialState = {
 
 export default function user(state = initialState, action) {
   switch (action.type) {
-    case '@app/SET_USER':
+    case '@app/SET_USER_LOGGED':
       return produce(state, (draft) => {
         draft.user = {
+          ...state.user,
           logged: true,
-          name: action.name,
-          email: action.email,
-          avatar: action.avatar,
         };
       });
     default:
