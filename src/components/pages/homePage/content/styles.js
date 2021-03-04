@@ -21,6 +21,14 @@ const useStyles = makeStyles(() => ({
     backgroundPositionY: '-2%',
     backgroundRepeat: 'no-repeat',
   },
+  gridCard: {
+    backgroundColor: '#fff',
+    minHeight: 400,
+    borderRadius: 10,
+    boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
+
+    marginTop: 50,
+  },
 }));
 
 export default useStyles;
