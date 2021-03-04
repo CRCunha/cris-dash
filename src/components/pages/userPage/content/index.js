@@ -7,9 +7,10 @@ import useStyles from './styles';
 export default function Content() {
   const classes = useStyles();
   const userStates = useSelector((state) => state.user, []);
+  localStorage.setItem('loggedUser', JSON.stringify(userStates.user));
 
   // eslint-disable-next-line no-console
-  console.log('teste', userStates);
+  // console.log('teste', userStates);
 
   return (
     <div>
