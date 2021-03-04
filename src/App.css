@@ -3,3 +3,10 @@
   min-height: 100vh;
   display: flex;
 }
+
+.content {
+  max-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}

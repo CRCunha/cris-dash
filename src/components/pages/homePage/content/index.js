@@ -34,6 +34,7 @@ export default function Content() {
                   }}
                 />
               </div>
+              <Grid item xs={12} className={classes.gridCard} />
             </Grid>
           </Grid>
         </Grid>
