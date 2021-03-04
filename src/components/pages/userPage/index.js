@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import Header from './header';
+import Content from './content';
 import useStyles from './styles';
 
 export default function UserPage() {
@@ -12,6 +13,7 @@ export default function UserPage() {
         <Grid item xs={12}>
           <Grid continer>
             <Header />
+            <Content />
           </Grid>
         </Grid>
       </Grid>
