@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import { useSelector } from 'react-redux';
-// import * as userActions from './store/modules/app/actions';
 import useStyles from './styles';
 
 export default function Content() {
@@ -10,7 +9,7 @@ export default function Content() {
   const userStates = useSelector((state) => state.user, []);
 
   // eslint-disable-next-line no-console
-  console.log('teste', userStates);
+  // console.log('teste', userStates);
 
   return (
     <div>

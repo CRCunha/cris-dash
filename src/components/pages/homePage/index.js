@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import Header from './header';
+import Header from '../../header';
 import Content from './content';
 import useStyles from './styles';
 
