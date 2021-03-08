@@ -1,14 +1,14 @@
-import React from 'react';
-import { Grid } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
+import { React } from 'react';
+import { Grid, Avatar } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import useStyles from './styles';
+
+import FormUser from '../../../forms/formUser';
 
 export default function Content() {
   const classes = useStyles();
   const userStates = useSelector((state) => state.user, []);
   localStorage.setItem('loggedUser', JSON.stringify(userStates.user));
-
   // eslint-disable-next-line no-console
   // console.log('teste', userStates);
 
@@ -23,7 +23,7 @@ export default function Content() {
                   <Grid container>
                     <Grid item xs={12} className={classes.cardAvatarItemAvatar}>
                       <Avatar
-                        alt={userStates.user.avatar}
+                        // alt={userStates.user.name}
                         src={userStates.user.avatar}
                         className={classes.avatar}
                       />
@@ -34,9 +34,7 @@ export default function Content() {
                   </Grid>
                 </Grid>
                 <Grid item xs={8} className={classes.gridCard}>
-                  <Grid container justify="center">
-                    Form com troca de nome/email/avatar
-                  </Grid>
+                  <FormUser />
                 </Grid>
               </Grid>
             </Grid>
