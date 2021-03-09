@@ -35,8 +35,8 @@ const useStyles = makeStyles(() => ({
   },
   menuLink: {
     width: '100%',
-    marginBottom: 20,
     display: 'flex',
+    marginBottom: 20,
     justifyContent: 'center',
   },
 }));

@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as AppActions from '../../store/modules/app/actions';
@@ -39,17 +40,25 @@ export default function Menu() {
                 </Grid>
               </Link>
             ) : (
-              <Grid
-                onClick={() => {
-                  dispatch(AppActions.openModalLogin());
-                }}
-                item
-                xs={8}
-                className={classes.menuIten}
-              >
-                <PersonRoundedIcon className={classes.menuItenIcon} />
-              </Grid>
+              <div className={classes.menuLink}>
+                <Grid
+                  className={classes.menuIten}
+                  onClick={() => {
+                    dispatch(AppActions.openModalLogin());
+                  }}
+                  item
+                  xs={8}
+                >
+                  <PersonRoundedIcon className={classes.menuItenIcon} />
+                </Grid>
+              </div>
             )}
+
+            <Link to="/users" className={classes.menuLink}>
+              <Grid Grid item xs={8} className={classes.menuIten}>
+                <PeopleAltIcon className={classes.menuItenIcon} />
+              </Grid>
+            </Link>
           </Grid>
         </Grid>
       </Grid>
