@@ -11,6 +11,9 @@ export default function HomePage() {
   const dispatch = useDispatch();
   const userStates = useSelector((state) => state.user, []);
 
+  // eslint-disable-next-line no-console
+  // console.log('Home Page', userStates);
+
   const verifyUser = () => {
     if (!userStates.user.logged) {
       dispatch(

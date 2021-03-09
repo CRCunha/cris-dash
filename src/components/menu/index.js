@@ -12,6 +12,9 @@ export default function Menu() {
   const dispatch = useDispatch();
   const userStates = useSelector((state) => state.user, []);
 
+  // eslint-disable-next-line no-console
+  // console.log('User Page', userStates);
+
   return (
     <div className={classes.menuContainer}>
       <Grid continer>

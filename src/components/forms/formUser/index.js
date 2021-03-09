@@ -14,13 +14,10 @@ export default function ModalLogin() {
   const { handleSubmit, errors, register } = useForm();
 
   // const userStates = useSelector((state) => state.user, []);
-  // eslint-disable-next-line no-console
-  // console.log('User', userStates);
 
   const sendRequest = (formData) => {
     setLoading(formData);
     dispatch(AppActions.closeModalLogin());
-    dispatch(UserActions.setUserLogged(formData));
     dispatch(AppActions.closeSnackbar());
     dispatch(
       AppActions.openSnackbar(

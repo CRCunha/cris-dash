@@ -8,9 +8,9 @@ import FormUser from '../../../forms/formUser';
 export default function Content() {
   const classes = useStyles();
   const userStates = useSelector((state) => state.user, []);
-  localStorage.setItem('loggedUser', JSON.stringify(userStates.user));
+
   // eslint-disable-next-line no-console
-  // console.log('teste', userStates);
+  // console.log('User Page', userStates);
 
   return (
     <div>
