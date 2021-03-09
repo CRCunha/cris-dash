@@ -16,11 +16,25 @@ export default function ModalLogin() {
   const sendRequest = (formData) => {
     setLoading(formData);
     dispatch(AppActions.closeModalLogin());
-    dispatch(UserActions.setUserLogged());
     dispatch(AppActions.closeSnackbar());
     dispatch(
       AppActions.openSnackbar('Login Efetuado Com Sucesso', 'success', 8000)
     );
+
+    const storageUserItens = formData;
+
+    storageUserItens.avatar = 'User';
+    storageUserItens.logged = true;
+    storageUserItens.name = 'User';
+    storageUserItens.email = formData.email;
+    delete storageUserItens.senha;
+
+    // eslint-disable-next-line no-console
+    // console.log(storageUserItens);
+
+    localStorage.setItem('loggedUser', JSON.stringify(storageUserItens));
+    dispatch(UserActions.updateUser(storageUserItens));
+
     setLoading(false);
   };
 

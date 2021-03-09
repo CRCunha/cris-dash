@@ -7,10 +7,11 @@ const useStyles = makeStyles(() => ({
   },
   gridCard: {
     backgroundColor: '#fff',
-    minHeight: 400,
+    // minHeight: 400,
     borderRadius: 10,
     boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
 
+    padding: '20px 0px 40px 0px',
     marginTop: 50,
   },
   cardAvatarItemAvatar: {
