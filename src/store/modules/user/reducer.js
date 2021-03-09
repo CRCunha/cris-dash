@@ -2,19 +2,12 @@ import produce from 'immer';
 
 const initialState = {
   user: {
-    name: JSON.parse(localStorage.getItem('loggedUser.name'))
-      ? JSON.parse(localStorage.getItem('loggedUser.name'))
-      : 'User Name',
-    email: JSON.parse(localStorage.getItem('loggedUser.email'))
-      ? JSON.parse(localStorage.getItem('loggedUser.email'))
-      : 'user@email.com',
-    avatar: JSON.parse(localStorage.getItem('loggedUser.avatar'))
-      ? JSON.parse(localStorage.getItem('loggedUser.avatar'))
-      : 'User',
-    logged: JSON.parse(localStorage.getItem('loggedUser.logged'))
-      ? JSON.parse(localStorage.getItem('loggedUser.logged'))
-      : false,
+    name: 'User Name',
+    email: 'user@email.com',
+    avatar: 'User',
+    logged: false,
   },
+  usersList: [],
 };
 
 export default function user(state = initialState, action) {
@@ -27,6 +20,11 @@ export default function user(state = initialState, action) {
           name: action.userObject.name,
           avatar: action.userObject.avatar,
         };
+      });
+
+    case '@app/SET_USER_LIST':
+      return produce(state, (draft) => {
+        draft.usersList = action.usersObject;
       });
 
     default:
