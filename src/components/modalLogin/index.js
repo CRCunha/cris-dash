@@ -11,7 +11,7 @@ export default function ModalLogin() {
   const appStates = useSelector((state) => state.app, []);
 
   // eslint-disable-next-line no-console
-  console.log('teste', appStates);
+  // console.log('teste', appStates);
 
   return (
     <div>

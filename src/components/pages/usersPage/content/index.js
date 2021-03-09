@@ -5,16 +5,13 @@ import useStyles from './styles';
 export default function Content() {
   const classes = useStyles();
 
-  // eslint-disable-next-line no-console
-  // console.log('User Page', userStates);
-
   return (
     <div>
       <Grid continer>
         <Grid item xs={12}>
           <Grid className={classes.cardContainer} container justify="center">
             <Grid item xs={10}>
-              <Grid container>asdasd</Grid>
+              <Grid container>asdasdasd</Grid>
             </Grid>
           </Grid>
         </Grid>
