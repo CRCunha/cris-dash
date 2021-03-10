@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Avatar } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import useStyles from './styles';
 
@@ -11,24 +11,37 @@ export default function Content() {
   console.log(usersStates.usersList);
 
   return (
-    <div style={{ zIndex: 20 }}>
-      <Grid continer className={classes.content}>
+    <div>
+      <Grid continer>
         <Grid item xs={12}>
           <Grid className={classes.cardContainer} container justify="center">
             <Grid item xs={10}>
-              <Grid container className={classes.cardContainerContent}>
-                {usersStates.usersList.map((value) => {
-                  return (
-                    <Grid item xs={12} className={classes.cadUser}>
-                      <p>{value.name}</p>
-                      <p>{value.email}</p>
-                      <p>{value.phone}</p>
-                      <p>{value.website}</p>
-                      <p>{value.company.name}</p>
+              {usersStates.usersList.map((value) => {
+                return (
+                  <Grid item xs={12} className={classes.gridCard}>
+                    <Grid container>
+                      <Grid
+                        item
+                        xs={2}
+                        className={classes.cardAvatarItemAvatar}
+                      >
+                        <Avatar
+                          className={classes.avatar}
+                          alt={value.name}
+                          src={value.name}
+                        />
+                      </Grid>
+                      <Grid item xs={10}>
+                        <p>Nome: {value.name}</p>
+                        <p>Email: {value.email}</p>
+                        <p>Phonme: {value.phone}</p>
+                        <p>{value.website}</p>
+                        <p>{value.company.name}</p>
+                      </Grid>
                     </Grid>
-                  );
-                })}
-              </Grid>
+                  </Grid>
+                );
+              })}
             </Grid>
           </Grid>
         </Grid>
