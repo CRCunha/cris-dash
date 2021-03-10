@@ -32,11 +32,11 @@ export default function Content() {
                         />
                       </Grid>
                       <Grid item xs={10}>
-                        <p>Nome: {value.name}</p>
+                        <p>Name: {value.name}</p>
                         <p>Email: {value.email}</p>
                         <p>Phonme: {value.phone}</p>
-                        <p>{value.website}</p>
-                        <p>{value.company.name}</p>
+                        <p>Web Site: {value.website}</p>
+                        <p>Company: {value.company.name}</p>
                       </Grid>
                     </Grid>
                   </Grid>
