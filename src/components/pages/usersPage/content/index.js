@@ -1,9 +1,60 @@
-import { React } from 'react';
-import { Grid } from '@material-ui/core';
+import { React, useState } from 'react';
+import { Grid, Avatar } from '@material-ui/core';
+import { useSelector } from 'react-redux';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import AppBar from '@material-ui/core/AppBar';
+import PropTypes from 'prop-types';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+
 import useStyles from './styles';
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`scrollable-auto-tabpanel-${index}`}
+      aria-labelledby={`scrollable-auto-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  // eslint-disable-next-line
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `scrollable-auto-tab-${index}`,
+    'aria-controls': `scrollable-auto-tabpanel-${index}`,
+  };
+}
 
 export default function Content() {
   const classes = useStyles();
+  const usersStates = useSelector((state) => state.user, []);
+  const [valueTab, setValueTab] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValueTab(newValue);
+  };
+
+  // eslint-disable-next-line no-console
+  console.log(usersStates.usersList);
 
   return (
     <div>
@@ -11,7 +62,95 @@ export default function Content() {
         <Grid item xs={12}>
           <Grid className={classes.cardContainer} container justify="center">
             <Grid item xs={10}>
-              <Grid container>asdasdasd</Grid>
+              {usersStates.usersList.map((value) => {
+                return (
+                  <Grid item xs={12} className={classes.gridCard}>
+                    <Grid container>
+                      <Grid
+                        item
+                        xs={2}
+                        className={classes.cardAvatarItemAvatar}
+                      >
+                        <Avatar
+                          className={classes.avatar}
+                          alt={value.name}
+                          src={value.name}
+                        />
+                      </Grid>
+                      <Grid item xs={10}>
+                        <Grid container alignItens="center">
+                          <AppBar position="static" color="none">
+                            <Tabs
+                              value={value}
+                              onChange={handleChange}
+                              indicatorColor="primary"
+                              textColor="primary"
+                              variant="scrollable"
+                              scrollButtons="auto"
+                              aria-label="scrollable auto tabs example"
+                            >
+                              <Tab label="User Infos" {...a11yProps(0)} />
+                              <Tab label="Adress Infos" {...a11yProps(1)} />
+                              <Tab label="Company Infos" {...a11yProps(2)} />
+                            </Tabs>
+                          </AppBar>
+                          <Grid item xs={12}>
+                            <TabPanel value={valueTab} index={0}>
+                              <Grid container>
+                                <Grid item xs={12}>
+                                  Name: {value.name}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  Email: {value.email}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  Phonme: {value.phone}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  Web Site: {value.website}
+                                </Grid>
+                              </Grid>
+                            </TabPanel>
+                          </Grid>
+                          <Grid item xs={12}>
+                            <TabPanel value={valueTab} index={1}>
+                              <Grid container>
+                                <Grid item xs={12}>
+                                  City: {value.address.city}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  Zipcode: {value.address.zipcode}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  Street: {value.address.street}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  Suite: {value.address.suite}
+                                </Grid>
+                              </Grid>
+                            </TabPanel>
+                          </Grid>
+                          <Grid item xs={12}>
+                            <TabPanel value={valueTab} index={2}>
+                              <Grid container>
+                                <Grid item xs={12}>
+                                  BS: {value.company.bs}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  CatchPhrase: {value.company.catchPhrase}
+                                </Grid>
+                                <Grid item xs={12}>
+                                  Company: {value.company.name}
+                                </Grid>
+                              </Grid>
+                            </TabPanel>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                );
+              })}
             </Grid>
           </Grid>
         </Grid>
