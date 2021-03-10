@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
     height: 250,
     backgroundImage: 'url(https://i.redd.it/iibrptucse951.png)',
     backgroundSize: 'cover',
+    zIndex: 10,
   },
   buttonContainer: {
     display: 'flex',
