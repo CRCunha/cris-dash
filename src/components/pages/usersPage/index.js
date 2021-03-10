@@ -14,7 +14,7 @@ export default function UsersPage() {
     <div className={classes.gridContainer}>
       <Grid continer>
         <Grid item xs={12}>
-          <Grid continer>
+          <Grid continer className={classes.teste}>
             <Header />
             <Content />
           </Grid>
