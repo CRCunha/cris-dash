@@ -77,7 +77,7 @@ export default function Content() {
                           src={value.name}
                         />
                       </Grid>
-                      <Grid item xs={10}>
+                      <Grid item xs={8}>
                         <Grid container alignItens="center">
                           <AppBar position="static" color="none">
                             <Tabs
@@ -147,6 +147,7 @@ export default function Content() {
                           </Grid>
                         </Grid>
                       </Grid>
+                      <Grid item xs={2} className={classes.cardImage} />
                     </Grid>
                   </Grid>
                 );

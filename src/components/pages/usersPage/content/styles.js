@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
     minHeight: 350,
     borderRadius: 10,
     boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
-    padding: '5px 10px',
+    padding: '0px 0px',
     marginBottom: 50,
     '& .MuiPaper-root': {
       padding: '10px 0px 0px 0px',
@@ -47,6 +47,11 @@ const useStyles = makeStyles(() => ({
   userCardTitle: {
     padding: '20px 0px',
     fontWeight: 'bold',
+  },
+  cardImage: {
+    backgroundImage: 'url(https://pbs.twimg.com/media/DtLfZEjWoAE8gfB.jpg)',
+    backgroundSize: 960,
+    borderRadius: 10,
   },
 }));
 
