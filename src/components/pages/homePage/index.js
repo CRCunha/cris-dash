@@ -20,8 +20,8 @@ export default function HomePage() {
         AppActions.openSnackbar(
           'Você não é um usuário cadastrado',
           'warning',
-          null
-        )
+          null,
+        ),
       );
     } else {
       dispatch(AppActions.closeSnackbar());

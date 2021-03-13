@@ -1,33 +1,34 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
-  cardContainer: {
-    height: 250,
-    marginTop: '-80px',
+  container: {
+    height: '100vh',
   },
-  cards: {
-    width: '100%',
+  contentTitle: {
+    fontWeight: 'bold',
+    fontSize: 26,
+    padding: '20px 0px',
+  },
+  mediaLogin: {
+    marginBottom: 30,
+  },
+  googleBtn: {
+    backgroundColor: '#6c85ff',
+    color: '#fff',
+    '& img': {
+      width: 30,
+      marginRight: 10,
+    },
+  },
+  TtBtn: {
+    backgroundColor: '#ddd',
+    color: '#3f3f3f',
     display: 'flex',
-    justifyContent: 'space-between',
-  },
-  card: {
-    width: 480,
-    backgroundColor: '#fff',
-    height: 250,
-    borderRadius: 10,
-    boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
-    backgroundSize: '60%',
-    backgroundPositionX: '100%',
-    backgroundPositionY: '-2%',
-    backgroundRepeat: 'no-repeat',
-  },
-  gridCard: {
-    backgroundColor: '#fff',
-    minHeight: 400,
-    borderRadius: 10,
-    boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
-
-    marginTop: 50,
+    justifyContent: 'center',
+    '& img': {
+      width: 30,
+      filter: 'grayscale(100%)',
+    },
   },
 }));
 

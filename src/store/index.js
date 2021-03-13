@@ -17,7 +17,7 @@ const enhancer =
   process.env.NODE_ENV === 'development'
     ? composeWithDevTools(
         // console.tron.createEnhancer(),
-        applyMiddleware(...middlewares)
+        applyMiddleware(...middlewares),
       )
     : // ? compose(console.tron.createEnhancer(), applyMiddleware(...middlewares))
       applyMiddleware(...middlewares);
