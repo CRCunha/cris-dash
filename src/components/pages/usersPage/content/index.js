@@ -79,7 +79,11 @@ export default function Content() {
                       </Grid>
                       <Grid item xs={8}>
                         <Grid container alignItens="center">
-                          <AppBar position="static" color="none">
+                          <AppBar
+                            position="static"
+                            color="none"
+                            className={classes.tabContainer}
+                          >
                             <Tabs
                               value={value}
                               onChange={handleChange}
@@ -97,16 +101,16 @@ export default function Content() {
                           <Grid item xs={12}>
                             <TabPanel value={valueTab} index={0}>
                               <Grid container>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Name: {value.name}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Email: {value.email}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Phonme: {value.phone}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Web Site: {value.website}
                                 </Grid>
                               </Grid>
@@ -115,16 +119,16 @@ export default function Content() {
                           <Grid item xs={12}>
                             <TabPanel value={valueTab} index={1}>
                               <Grid container>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   City: {value.address.city}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Zipcode: {value.address.zipcode}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Street: {value.address.street}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Suite: {value.address.suite}
                                 </Grid>
                               </Grid>
@@ -133,13 +137,13 @@ export default function Content() {
                           <Grid item xs={12}>
                             <TabPanel value={valueTab} index={2}>
                               <Grid container>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   BS: {value.company.bs}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   CatchPhrase: {value.company.catchPhrase}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={12} className={classes.tagItem}>
                                   Company: {value.company.name}
                                 </Grid>
                               </Grid>

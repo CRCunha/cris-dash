@@ -23,8 +23,8 @@ export default function ModalLogin() {
       AppActions.openSnackbar(
         'As Informações Foram Salvas com Sucesso',
         'success',
-        8000
-      )
+        8000,
+      ),
     );
 
     const userObject = formData;

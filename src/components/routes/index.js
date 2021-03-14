@@ -6,24 +6,27 @@ import Menu from '../menu';
 import HomePage from '../pages/homePage';
 import UserPage from '../pages/userPage';
 import UsersPage from '../pages/usersPage';
+import LoginPage from '../pages/loginPage';
 
-const Routes = () => (
-  <BrowserRouter>
-    <div
-      style={{
-        width: '100vw',
-        display: 'flex',
-        flexWrap: 'no-wrap',
-      }}
-    >
-      <Menu />
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/user" exact component={UserPage} />
-        <Route path="/users" exact component={UsersPage} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
-
-export default Routes;
+export default function Routes() {
+  const source = window.location.pathname;
+  return (
+    <BrowserRouter>
+      <div
+        style={{
+          width: '100vw',
+          display: 'flex',
+          flexWrap: 'no-wrap',
+        }}
+      >
+        {source !== '/login' ? <Menu /> : null}
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/user" exact component={UserPage} />
+          <Route path="/users" exact component={UsersPage} />
+          <Route path="/login" exact component={LoginPage} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
+}
