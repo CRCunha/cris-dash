@@ -1,5 +1,6 @@
 import { React } from 'react';
 import { Grid } from '@material-ui/core';
+import ExplanatoryCard from '../../../explanatoryCard';
 import useStyles from './styles';
 
 export default function Content() {
@@ -10,7 +11,7 @@ export default function Content() {
         <Grid item xs={12}>
           <Grid className={classes.cardContainer} container justify="center">
             <Grid item xs={10}>
-              Product
+              <ExplanatoryCard />
             </Grid>
           </Grid>
         </Grid>
