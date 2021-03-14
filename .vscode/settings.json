@@ -29,9 +29,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[latex]": {
-    "editor.defaultFormatter": "nickfo/*/de.latex-formatter"
-  },
   "search.exclude": {
     "**/assets": true
   },

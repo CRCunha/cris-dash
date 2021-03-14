@@ -30,7 +30,8 @@ const useStyles = makeStyles(() => ({
       boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
     },
     '& .MuiGrid-grid-xs-12': {
-      padding: '8px 0px',
+      padding: '8px 5px',
+      // marginLeft: '-px',
     },
   },
   cardAvatarItemAvatar: {
@@ -50,8 +51,14 @@ const useStyles = makeStyles(() => ({
   },
   cardImage: {
     backgroundImage: 'url(https://pbs.twimg.com/media/DtLfZEjWoAE8gfB.jpg)',
-    backgroundSize: 960,
+    backgroundSize: 970,
     borderRadius: 10,
+  },
+  tagItem: {
+    backgroundColor: '#efeefe',
+    padding: '0px 10px',
+    borderRadius: 6,
+    marginBottom: 10,
   },
 }));
 
