@@ -21,6 +21,7 @@
   "workbench.sideBar.location": "left",
   "glassit.alpha": 245,
   "peacock.color": "#3037db",
+  "editor.minimap.enabled": false,
   "color-highlight.enable": true,
   "editor.wordWrap": "on",
   "editor.multiCursorModifier": "ctrlCmd",
