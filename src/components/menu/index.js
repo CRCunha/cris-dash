@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import * as AppActions from '../../store/modules/app/actions';
 import * as UsersActions from '../../store/modules/user/actions';
+import * as ProductActions from '../../store/modules/products/actions';
 import useStyles from './styles';
 
 export default function Menu() {
@@ -28,8 +29,21 @@ export default function Menu() {
       });
   };
 
+  const getAllProducts = () => {
+    axios
+      .get('    https://fakestoreapi.com/products')
+      .then((response) => {
+        dispatch(ProductActions.setProductList(response.data));
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+  };
+
   useEffect(() => {
     getUsersList();
+    getAllProducts();
   }, []);
 
   return (
