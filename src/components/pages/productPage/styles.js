@@ -4,6 +4,7 @@ const useStyles = makeStyles(() => ({
   gridContainer: {
     width: 'calc(100vw - 80px)',
     height: '100vh',
+    overflow: 'hidden',
   },
 }));
 
