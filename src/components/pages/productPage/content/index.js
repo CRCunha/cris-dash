@@ -24,7 +24,7 @@ export default function Content() {
                 style={{
                   marginTop: 20,
                   overflow: 'auto',
-                  height: '50vh',
+                  height: '51vh',
                 }}
               >
                 {productsStates.products.map((value) => {
