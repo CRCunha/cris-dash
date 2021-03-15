@@ -34,6 +34,7 @@ export default function Menu() {
       .get('    https://fakestoreapi.com/products')
       .then((response) => {
         dispatch(ProductActions.setProductList(response.data));
+        dispatch(ProductActions.setLoading(false));
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
