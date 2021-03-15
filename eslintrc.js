@@ -25,6 +25,7 @@ module.exports = {
     // "global-require":0,
     // "indent": [2, 2],
     'no-nested-ternary': 0,
+    endOfLine: 'auto',
     // "max-len": [2, {"code": 140, "tabWidth": 4, "ignoreUrls": true}],
     'no-param-reassign': 0,
     'react/forbid-prop-types': 0,
