@@ -30,6 +30,9 @@ const useStyles = makeStyles(() => ({
       filter: 'grayscale(100%)',
     },
   },
+  fieldText: {
+    marginBottom: 20,
+  },
 }));
 
 export default useStyles;
