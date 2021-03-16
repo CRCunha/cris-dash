@@ -3,11 +3,13 @@ import { Grid } from '@material-ui/core';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import LocalMallRoundedIcon from '@material-ui/icons/LocalMallRounded';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import * as AppActions from '../../store/modules/app/actions';
 import * as UsersActions from '../../store/modules/user/actions';
+import * as ProductActions from '../../store/modules/products/actions';
 import useStyles from './styles';
 
 export default function Menu() {
@@ -27,8 +29,22 @@ export default function Menu() {
       });
   };
 
+  const getAllProducts = () => {
+    axios
+      .get('    https://fakestoreapi.com/products')
+      .then((response) => {
+        dispatch(ProductActions.setProductList(response.data));
+        dispatch(ProductActions.setLoading(false));
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+  };
+
   useEffect(() => {
     getUsersList();
+    getAllProducts();
   }, []);
 
   return (
@@ -76,6 +92,16 @@ export default function Menu() {
             >
               <Grid Grid item xs={8} className={classes.menuIten}>
                 <PeopleAltIcon className={classes.menuItenIcon} />
+              </Grid>
+            </Link>
+
+            <Link
+              onClick={() => getUsersList()}
+              to="/products"
+              className={classes.menuLink}
+            >
+              <Grid Grid item xs={8} className={classes.menuIten}>
+                <LocalMallRoundedIcon className={classes.menuItenIcon} />
               </Grid>
             </Link>
           </Grid>

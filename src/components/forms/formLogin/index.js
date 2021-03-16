@@ -17,9 +17,7 @@ export default function ModalLogin() {
     setLoading(formData);
     dispatch(AppActions.closeModalLogin());
     dispatch(AppActions.closeSnackbar());
-    dispatch(
-      AppActions.openSnackbar('Login Efetuado Com Sucesso', 'success', 8000),
-    );
+    dispatch(AppActions.openSnackbar('Login Efetuado Com Sucesso', 'success'));
 
     const storageUserItens = formData;
 

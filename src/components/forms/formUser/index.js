@@ -23,7 +23,6 @@ export default function ModalLogin() {
       AppActions.openSnackbar(
         'As Informações Foram Salvas com Sucesso',
         'success',
-        8000,
       ),
     );
 

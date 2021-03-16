@@ -7,6 +7,7 @@ import HomePage from '../pages/homePage';
 import UserPage from '../pages/userPage';
 import UsersPage from '../pages/usersPage';
 import LoginPage from '../pages/loginPage';
+import ProductPage from '../pages/productPage';
 
 export default function Routes() {
   const source = window.location.pathname;
@@ -24,6 +25,7 @@ export default function Routes() {
           <Route path="/" exact component={HomePage} />
           <Route path="/user" exact component={UserPage} />
           <Route path="/users" exact component={UsersPage} />
+          <Route path="/products" exact component={ProductPage} />
           <Route path="/login" exact component={LoginPage} />
         </Switch>
       </div>
