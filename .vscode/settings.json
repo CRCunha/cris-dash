@@ -20,6 +20,7 @@
   },
   "workbench.sideBar.location": "left",
   "glassit.alpha": 245,
+  "editor.minimap.enabled": false,
   "peacock.color": "#3037db",
   "editor.minimap.enabled": false,
   "color-highlight.enable": true,
