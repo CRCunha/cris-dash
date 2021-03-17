@@ -9,8 +9,6 @@ export default function Content() {
   const classes = useStyles();
 
   const productsStates = useSelector((state) => state.products, []);
-  // eslint-disable-next-line no-console
-  console.log('productsStates', productsStates.loading);
 
   return (
     <div>
@@ -30,7 +28,7 @@ export default function Content() {
                 >
                   {productsStates.products.map((value) => {
                     return (
-                      <Grid item xs={12}>
+                      <Grid key={value.id} item xs={12}>
                         <Grid
                           container
                           alignItems="center"

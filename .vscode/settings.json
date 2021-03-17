@@ -62,8 +62,8 @@
     "javascript": "jsx",
     "php": "html"
   },
-"editor.fontFamily": "Fira Code",
-"editor.fontLigatures": true
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
   "workbench.iconTheme": "material-icon-theme",
   "prettier.useEditorConfig": false,
   "prettier.trailingComma": "all",

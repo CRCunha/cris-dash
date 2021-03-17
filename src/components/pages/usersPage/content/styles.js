@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   cardContainer: {
     height: '80vh',
-    marginTop: '-60px',
+    marginTop: '-80px',
     overflow: 'auto',
   },
   cards: {

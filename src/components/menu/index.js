@@ -31,7 +31,7 @@ export default function Menu() {
 
   const getAllProducts = () => {
     axios
-      .get('    https://fakestoreapi.com/products')
+      .get('https://fakestoreapi.com/products')
       .then((response) => {
         dispatch(ProductActions.setProductList(response.data));
         dispatch(ProductActions.setLoading(false));
