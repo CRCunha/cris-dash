@@ -12,6 +12,7 @@ import * as UsersActions from '../../store/modules/user/actions';
 import * as ProductActions from '../../store/modules/products/actions';
 import * as ChartsActions from '../../store/modules/charts/actions';
 import CalendarDataFile from '../../assets/data/calendar.json';
+import ProcustDataFile from '../../assets/data/products.json';
 import useStyles from './styles';
 
 export default function Menu() {
@@ -36,16 +37,7 @@ export default function Menu() {
   };
 
   const getAllProducts = () => {
-    axios
-      .get('https://fakestoreapi.com/products')
-      .then((response) => {
-        dispatch(ProductActions.setProductList(response.data));
-        dispatch(ProductActions.setLoading(false));
-      })
-      .catch((error) => {
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
+    dispatch(ProductActions.setProductList(ProcustDataFile));
   };
 
   useEffect(() => {

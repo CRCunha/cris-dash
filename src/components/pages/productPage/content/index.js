@@ -10,6 +10,9 @@ export default function Content() {
 
   const productsStates = useSelector((state) => state.products, []);
 
+  // eslint-disable-next-line no-console
+  console.log(productsStates.products);
+
   return (
     <div>
       <Grid continer>
@@ -17,6 +20,9 @@ export default function Content() {
           <Grid container justify="center">
             <Grid item xs={10}>
               <ExplanatoryCard />
+              <Grid container className={classes.divider}>
+                <Grid item xs={12} className={classes.divider} />
+              </Grid>
               {!productsStates.loading ? (
                 <Grid
                   container
@@ -33,20 +39,20 @@ export default function Content() {
                           container
                           alignItems="center"
                           className={clsx(classes.drawer, {
-                            [classes.gridCardError]: value.price < 50.0,
+                            [classes.gridCardError]: value.price < 15.0,
                             [classes.gridCardWarning]:
-                              value.price >= 50.0 && value.price < 100.0,
-                            [classes.gridCardOk]: value.price > 100.0,
+                              value.price >= 15.0 && value.price < 20.0,
+                            [classes.gridCardOk]: value.price >= 20.0,
                           })}
                         >
-                          <Grid item xs={4}>
+                          <Grid item xs={3}>
                             {value.title}
                           </Grid>
                           <Grid item xs={1}>
-                            {value.price}
+                            {value.price} U$
                           </Grid>
-                          <Grid item xs={1}>
-                            {value.category}
+                          <Grid item xs={2}>
+                            {value.type}
                           </Grid>
                           <Grid item xs={6} style={{ paddingLeft: 10 }}>
                             {value.description}
