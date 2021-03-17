@@ -10,12 +10,18 @@ import axios from 'axios';
 import * as AppActions from '../../store/modules/app/actions';
 import * as UsersActions from '../../store/modules/user/actions';
 import * as ProductActions from '../../store/modules/products/actions';
+import * as ChartsActions from '../../store/modules/charts/actions';
+import CalendarDataFile from '../../assets/data/calendar.json';
 import useStyles from './styles';
 
 export default function Menu() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const userStates = useSelector((state) => state.user, []);
+
+  const setCalendarChartData = () => {
+    dispatch(ChartsActions.setCalendarData(CalendarDataFile));
+  };
 
   const getUsersList = () => {
     axios
@@ -45,6 +51,7 @@ export default function Menu() {
   useEffect(() => {
     getUsersList();
     getAllProducts();
+    setCalendarChartData();
   }, []);
 
   return (

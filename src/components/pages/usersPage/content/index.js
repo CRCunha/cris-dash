@@ -64,7 +64,12 @@ export default function Content() {
             <Grid item xs={10}>
               {usersStates.usersList.map((value) => {
                 return (
-                  <Grid item xs={12} className={classes.gridCard}>
+                  <Grid
+                    item
+                    key={value.id}
+                    xs={12}
+                    className={classes.gridCard}
+                  >
                     <Grid container>
                       <Grid
                         item
