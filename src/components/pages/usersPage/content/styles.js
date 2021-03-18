@@ -34,6 +34,14 @@ const useStyles = makeStyles(() => ({
       // marginLeft: '-px',
     },
   },
+  gridCardChart: {
+    backgroundColor: '#fff',
+    height: 400,
+    borderRadius: 10,
+    boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
+
+    marginBottom: 50,
+  },
   cardAvatarItemAvatar: {
     minHeight: 350,
     display: 'flex',
