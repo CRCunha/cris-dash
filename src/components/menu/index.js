@@ -14,6 +14,7 @@ import * as ChartsActions from '../../store/modules/charts/actions';
 import CalendarDataFile from '../../assets/data/calendar.json';
 import SteamDataFile from '../../assets/data/stream.json';
 import PieDataFile from '../../assets/data/pie.json';
+import RadarDataFile from '../../assets/data/radar.json';
 import ProcustDataFile from '../../assets/data/products.json';
 import useStyles from './styles';
 
@@ -24,6 +25,10 @@ export default function Menu() {
 
   const setCalendarChartData = () => {
     dispatch(ChartsActions.setCalendarData(CalendarDataFile));
+  };
+
+  const setRadarChartData = () => {
+    dispatch(ChartsActions.setRadarData(RadarDataFile));
   };
 
   const setPieChartData = () => {
@@ -56,6 +61,7 @@ export default function Menu() {
     setCalendarChartData();
     setStreamChartData();
     setPieChartData();
+    setRadarChartData();
   }, []);
 
   return (

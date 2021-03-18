@@ -3,6 +3,7 @@ import { Grid } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { ResponsiveStream } from '@nivo/stream';
 import { ResponsivePie } from '@nivo/pie';
+import { ResponsiveRadar } from '@nivo/radar';
 import useStyles from './styles';
 
 export default function Content() {
@@ -118,7 +119,35 @@ export default function Content() {
                     backgroundImage:
                       'url(https://cdni.iconscout.com/illustration/premium/thumb/concept-of-online-transaction-1886571-1598242.png)',
                   }}
-                />
+                >
+                  <ResponsiveRadar
+                    data={chartStates.radar}
+                    keys={['chardonay', 'carmenere', 'syrah']}
+                    indexBy="taste"
+                    maxValue="auto"
+                    margin={{ top: 45, right: 100, bottom: 45, left: -120 }}
+                    curve="linearClosed"
+                    borderWidth={2}
+                    borderColor={{ from: 'color' }}
+                    gridLevels={5}
+                    gridShape="circular"
+                    gridLabelOffset={10000}
+                    enableDots
+                    dotSize={10}
+                    dotColor={{ theme: 'background' }}
+                    dotBorderWidth={2}
+                    dotBorderColor={{ from: 'color' }}
+                    enableDotLabel
+                    dotLabel="value"
+                    dotLabelYOffset={-12}
+                    colors={{ scheme: 'nivo' }}
+                    fillOpacity={0.15}
+                    blendMode="multiply"
+                    animate
+                    motionConfig="wobbly"
+                    isInteractive
+                  />
+                </div>
                 <div
                   className={classes.card}
                   style={{
@@ -129,7 +158,6 @@ export default function Content() {
               </div>
               <Grid item xs={12} className={classes.gridCard}>
                 <ResponsiveStream
-                  style={{ backgroundCOlor: '#3f3f' }}
                   data={chartStates.stream}
                   keys={[
                     'Raoul',
