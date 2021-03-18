@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
   },
   gridCard: {
     backgroundColor: '#fff',
-    minHeight: 400,
+    height: 400,
     borderRadius: 10,
     boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
 

@@ -12,6 +12,7 @@ import * as UsersActions from '../../store/modules/user/actions';
 import * as ProductActions from '../../store/modules/products/actions';
 import * as ChartsActions from '../../store/modules/charts/actions';
 import CalendarDataFile from '../../assets/data/calendar.json';
+import SteamDataFile from '../../assets/data/stream.json';
 import ProcustDataFile from '../../assets/data/products.json';
 import useStyles from './styles';
 
@@ -22,6 +23,10 @@ export default function Menu() {
 
   const setCalendarChartData = () => {
     dispatch(ChartsActions.setCalendarData(CalendarDataFile));
+  };
+
+  const setStreamChartData = () => {
+    dispatch(ChartsActions.setStreamData(SteamDataFile));
   };
 
   const getUsersList = () => {
@@ -44,6 +49,7 @@ export default function Menu() {
     getUsersList();
     getAllProducts();
     setCalendarChartData();
+    setStreamChartData();
   }, []);
 
   return (

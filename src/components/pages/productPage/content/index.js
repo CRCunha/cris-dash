@@ -29,7 +29,7 @@ export default function Content() {
                   style={{
                     marginTop: 20,
                     overflow: 'auto',
-                    height: '51vh',
+                    height: '49vh',
                   }}
                 >
                   {productsStates.products.map((value) => {
