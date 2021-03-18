@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { ResponsiveStream } from '@nivo/stream';
 import { ResponsivePie } from '@nivo/pie';
 import { ResponsiveRadar } from '@nivo/radar';
+import { ResponsiveWaffle } from '@nivo/waffle';
 import useStyles from './styles';
 
 export default function Content() {
@@ -26,9 +27,10 @@ export default function Content() {
                 >
                   <ResponsivePie
                     data={chartStates.pie}
-                    margin={{ top: 75, right: 75, bottom: 55, left: -120 }}
+                    margin={{ top: 40, right: 75, bottom: 40, left: -140 }}
                     innerRadius={0.5}
                     padAngle={0.4}
+                    enableRadialLabels={false}
                     cornerRadius={3}
                     colors={{ scheme: 'nivo' }}
                     borderWidth={1}
@@ -125,7 +127,7 @@ export default function Content() {
                     keys={['chardonay', 'carmenere', 'syrah']}
                     indexBy="taste"
                     maxValue="auto"
-                    margin={{ top: 45, right: 100, bottom: 45, left: -120 }}
+                    margin={{ top: 40, right: 100, bottom: 40, left: -140 }}
                     curve="linearClosed"
                     borderWidth={2}
                     borderColor={{ from: 'color' }}
@@ -137,7 +139,7 @@ export default function Content() {
                     dotColor={{ theme: 'background' }}
                     dotBorderWidth={2}
                     dotBorderColor={{ from: 'color' }}
-                    enableDotLabel
+                    // enableDotLabel
                     dotLabel="value"
                     dotLabelYOffset={-12}
                     colors={{ scheme: 'nivo' }}
@@ -154,7 +156,24 @@ export default function Content() {
                     backgroundImage:
                       'url(https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-via-mobile-application-1886572-1598243.png)',
                   }}
-                />
+                >
+                  <ResponsiveWaffle
+                    data={chartStates.waffle}
+                    total={100}
+                    rows={10}
+                    columns={10}
+                    margin={{ top: 25, right: 110, bottom: 25, left: -120 }}
+                    colors={{ scheme: 'nivo' }}
+                    emptyColor="#fff"
+                    borderColor={{
+                      from: 'color',
+                      modifiers: [['darker', 0.3]],
+                    }}
+                    animate
+                    motionStiffness={90}
+                    motionDamping={11}
+                  />
+                </div>
               </div>
               <Grid item xs={12} className={classes.gridCard}>
                 <ResponsiveStream
