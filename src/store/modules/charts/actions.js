@@ -6,6 +6,10 @@ export const setStreamData = (data) => {
   return { type: '@app/SET_STREAM_DATA', data };
 };
 
+export const setPieData = (data) => {
+  return { type: '@app/SET_PIE_DATA', data };
+};
+
 export const setLoading = (loading) => {
   return { type: '@app/SET_LOADING', loading };
 };
