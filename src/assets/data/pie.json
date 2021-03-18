@@ -1,0 +1,32 @@
+[
+  {
+    "id": "php",
+    "label": "php",
+    "value": 7,
+    "color": "hsl(356, 70%, 50%)"
+  },
+  {
+    "id": "go",
+    "label": "go",
+    "value": 84,
+    "color": "hsl(226, 70%, 50%)"
+  },
+  {
+    "id": "sass",
+    "label": "sass",
+    "value": 137,
+    "color": "hsl(84, 70%, 50%)"
+  },
+  {
+    "id": "make",
+    "label": "make",
+    "value": 236,
+    "color": "hsl(45, 70%, 50%)"
+  },
+  {
+    "id": "lisp",
+    "label": "lisp",
+    "value": 40,
+    "color": "hsl(26, 70%, 50%)"
+  }
+]

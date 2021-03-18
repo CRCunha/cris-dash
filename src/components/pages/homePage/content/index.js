@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { ResponsiveStream } from '@nivo/stream';
+import { ResponsivePie } from '@nivo/pie';
 import useStyles from './styles';
 
 export default function Content() {
@@ -21,7 +22,96 @@ export default function Content() {
                     backgroundImage:
                       'url(https://cdni.iconscout.com/illustration/premium/thumb/man-looking-at-his-mobile-notification-1886583-1598254.png)',
                   }}
-                />
+                >
+                  <ResponsivePie
+                    data={chartStates.pie}
+                    margin={{ top: 75, right: 75, bottom: 55, left: -120 }}
+                    innerRadius={0.5}
+                    padAngle={0.4}
+                    cornerRadius={3}
+                    colors={{ scheme: 'nivo' }}
+                    borderWidth={1}
+                    borderColor={{
+                      from: 'color',
+                      modifiers: [['darker', 0]],
+                    }}
+                    radialLabelsSkipAngle={1}
+                    radialLabelsTextColor="#333333"
+                    radialLabelsLinkColor={{ from: 'color' }}
+                    sliceLabelsSkipAngle={10}
+                    sliceLabelsTextColor="#333333"
+                    defs={[
+                      {
+                        id: 'dots',
+                        type: 'patternDots',
+                        background: 'inherit',
+                        color: 'rgba(255, 255, 255, 0.3)',
+                        size: 4,
+                        padding: 1,
+                        stagger: true,
+                      },
+                      {
+                        id: 'lines',
+                        type: 'patternLines',
+                        background: 'inherit',
+                        color: 'rgba(255, 255, 255, 0.3)',
+                        rotation: -45,
+                        lineWidth: 6,
+                        spacing: 10,
+                      },
+                    ]}
+                    fill={[
+                      {
+                        match: {
+                          id: 'ruby',
+                        },
+                        id: 'dots',
+                      },
+                      {
+                        match: {
+                          id: 'c',
+                        },
+                        id: 'dots',
+                      },
+                      {
+                        match: {
+                          id: 'go',
+                        },
+                        id: 'dots',
+                      },
+                      {
+                        match: {
+                          id: 'python',
+                        },
+                        id: 'dots',
+                      },
+                      {
+                        match: {
+                          id: 'scala',
+                        },
+                        id: 'lines',
+                      },
+                      {
+                        match: {
+                          id: 'lisp',
+                        },
+                        id: 'lines',
+                      },
+                      {
+                        match: {
+                          id: 'elixir',
+                        },
+                        id: 'lines',
+                      },
+                      {
+                        match: {
+                          id: 'javascript',
+                        },
+                        id: 'lines',
+                      },
+                    ]}
+                  />
+                </div>
                 <div
                   className={classes.card}
                   style={{
