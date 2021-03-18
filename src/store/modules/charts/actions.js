@@ -10,6 +10,10 @@ export const setPieData = (data) => {
   return { type: '@app/SET_PIE_DATA', data };
 };
 
+export const setRadarData = (data) => {
+  return { type: '@app/SET_RADAR_DATA', data };
+};
+
 export const setLoading = (loading) => {
   return { type: '@app/SET_LOADING', loading };
 };
