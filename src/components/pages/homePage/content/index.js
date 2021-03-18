@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { ResponsiveStream } from '@nivo/stream';
 import { ResponsivePie } from '@nivo/pie';
 import { ResponsiveRadar } from '@nivo/radar';
+import { ResponsiveWaffle } from '@nivo/waffle';
 import useStyles from './styles';
 
 export default function Content() {
@@ -154,7 +155,24 @@ export default function Content() {
                     backgroundImage:
                       'url(https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-via-mobile-application-1886572-1598243.png)',
                   }}
-                />
+                >
+                  <ResponsiveWaffle
+                    data={chartStates.waffle}
+                    total={100}
+                    rows={10}
+                    columns={10}
+                    margin={{ top: 25, right: 110, bottom: 25, left: -120 }}
+                    colors={{ scheme: 'nivo' }}
+                    emptyColor="#fff"
+                    borderColor={{
+                      from: 'color',
+                      modifiers: [['darker', 0.3]],
+                    }}
+                    animate
+                    motionStiffness={90}
+                    motionDamping={11}
+                  />
+                </div>
               </div>
               <Grid item xs={12} className={classes.gridCard}>
                 <ResponsiveStream

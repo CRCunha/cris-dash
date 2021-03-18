@@ -15,6 +15,7 @@ import CalendarDataFile from '../../assets/data/calendar.json';
 import SteamDataFile from '../../assets/data/stream.json';
 import PieDataFile from '../../assets/data/pie.json';
 import RadarDataFile from '../../assets/data/radar.json';
+import WaffleDataFile from '../../assets/data/waffle.json';
 import ProcustDataFile from '../../assets/data/products.json';
 import useStyles from './styles';
 
@@ -29,6 +30,10 @@ export default function Menu() {
 
   const setRadarChartData = () => {
     dispatch(ChartsActions.setRadarData(RadarDataFile));
+  };
+
+  const setWaffleChartData = () => {
+    dispatch(ChartsActions.setWaffleData(WaffleDataFile));
   };
 
   const setPieChartData = () => {
@@ -62,6 +67,7 @@ export default function Menu() {
     setStreamChartData();
     setPieChartData();
     setRadarChartData();
+    setWaffleChartData();
   }, []);
 
   return (

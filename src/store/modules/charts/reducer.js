@@ -3,6 +3,7 @@ import produce from 'immer';
 const initialState = {
   calendar: [],
   stream: [],
+  waffle: [],
   radar: [],
   pie: [],
   loading: true,
@@ -32,6 +33,12 @@ export default function charts(state = initialState, action) {
       // eslint-disable-next-line no-console
       return produce(state, (draft) => {
         draft.pie = action.data;
+      });
+
+    case '@app/SET_WAFFLE_DATA':
+      // eslint-disable-next-line no-console
+      return produce(state, (draft) => {
+        draft.waffle = action.data;
       });
 
     case '@app/SET_LOADING':
