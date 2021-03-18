@@ -2,7 +2,7 @@ import produce from 'immer';
 
 const initialState = {
   products: [],
-  loading: true,
+  loading: false,
 };
 
 export default function products(state = initialState, action) {
