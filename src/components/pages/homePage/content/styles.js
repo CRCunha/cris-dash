@@ -2,24 +2,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   cardContainer: {
-    height: 250,
+    height: '80vh',
     marginTop: '-80px',
-  },
-  cards: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  card: {
-    width: 480,
-    backgroundColor: '#fff',
-    height: 250,
-    borderRadius: 10,
-    boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
-    backgroundSize: '60%',
-    backgroundPositionX: '110%',
-    backgroundPositionY: '-2%',
-    backgroundRepeat: 'no-repeat',
+    overflowX: 'hidden',
   },
   gridCard: {
     backgroundColor: '#fff',
@@ -28,6 +13,16 @@ const useStyles = makeStyles(() => ({
     boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
 
     marginTop: 50,
+  },
+  card: {
+    marginRight: 50,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    height: 250,
+    backgroundSize: '60%',
+    backgroundPositionX: '110%',
+    backgroundPositionY: '-2%',
+    backgroundRepeat: 'no-repeat',
   },
 }));
 
