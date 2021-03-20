@@ -24,6 +24,23 @@ const useStyles = makeStyles(() => ({
     backgroundPositionY: '-2%',
     backgroundRepeat: 'no-repeat',
   },
+  BottomContent: {
+    marginTop: 50,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
+  },
+  leftContentChart: {
+    height: 300,
+  },
+  leftContentText: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingRight: 50,
+
+    color: '#505050',
+  },
 }));
 
 export default useStyles;
