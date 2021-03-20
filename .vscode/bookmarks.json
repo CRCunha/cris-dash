@@ -1,11 +1,11 @@
 {
 	"files": [
 		{
-			"path": "src/components/pages/homePage/content/index.js",
+			"path": "src/components/menu/index.js",
 			"bookmarks": [
 				{
-					"line": 164,
-					"column": 76,
+					"line": 31,
+					"column": 35,
 					"label": ""
 				}
 			]
