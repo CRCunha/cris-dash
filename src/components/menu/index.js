@@ -17,6 +17,7 @@ import PieDataFile from '../../assets/data/pie.json';
 import RadarDataFile from '../../assets/data/radar.json';
 import WaffleDataFile from '../../assets/data/waffle.json';
 import ProcustDataFile from '../../assets/data/products.json';
+import SwarmDataFile from '../../assets/data/swarm.json';
 import useStyles from './styles';
 
 export default function Menu() {
@@ -26,6 +27,10 @@ export default function Menu() {
 
   const setCalendarChartData = () => {
     dispatch(ChartsActions.setCalendarData(CalendarDataFile));
+  };
+
+  const setSwarmChartData = () => {
+    dispatch(ChartsActions.setSwarmData(SwarmDataFile));
   };
 
   const setRadarChartData = () => {
@@ -68,6 +73,7 @@ export default function Menu() {
     setPieChartData();
     setRadarChartData();
     setWaffleChartData();
+    setSwarmChartData();
   }, []);
 
   return (
