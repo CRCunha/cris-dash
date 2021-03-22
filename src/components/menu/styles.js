@@ -39,6 +39,11 @@ const useStyles = makeStyles(() => ({
     marginBottom: 20,
     justifyContent: 'center',
   },
+
+  divider: {
+    marginBottom: 20,
+    color: 'transparent',
+  },
 }));
 
 export default useStyles;

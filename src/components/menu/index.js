@@ -1,5 +1,5 @@
 import { React, useEffect } from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Divider } from '@material-ui/core';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
@@ -98,7 +98,9 @@ export default function Menu() {
                 <HomeRoundedIcon className={classes.menuItenIcon} />
               </Grid>
             </Link>
-
+            <Grid item xs={8} className={classes.divider}>
+              <Divider />
+            </Grid>
             {userStates.user.logged ? (
               <Link to="/user" className={classes.menuLink}>
                 <Grid item xs={8} className={classes.menuIten}>
@@ -119,7 +121,6 @@ export default function Menu() {
                 </Grid>
               </div>
             )}
-
             <Link
               onClick={() => getUsersList()}
               to="/users"
@@ -129,7 +130,6 @@ export default function Menu() {
                 <PeopleAltIcon className={classes.menuItenIcon} />
               </Grid>
             </Link>
-
             <Link
               onClick={() => getUsersList()}
               to="/products"
