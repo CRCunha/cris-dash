@@ -9,8 +9,8 @@
 
 ![License](http://img.shields.io/:license-mit-blue.svg)
 ![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)
-![Repo Size](https://img.shields.io/github/repo-size/CRCunha/dashboard)
-![Commits](https://img.shields.io/github/commit-activity/m/CRCunha/dashboard)
+![Repo Size](https://img.shields.io/github/repo-size/CRCunha/cris-dash)
+![Commits](https://img.shields.io/github/commit-activity/m/CRCunha/cris-dash)
 
 
 
