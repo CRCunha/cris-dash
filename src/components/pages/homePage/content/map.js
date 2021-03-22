@@ -26,19 +26,21 @@ export default function Content() {
                 unknownColor="#eee"
                 label="properties.name"
                 valueFormat=".2s"
-                projectionTranslation={[0.5, 0.5]}
+                projectionTranslation={[0.45, 0.7]}
                 projectionRotation={[0, 0, 0]}
                 enableGraticule
                 graticuleLineColor="#dddddd"
                 borderWidth={0.5}
                 borderColor="#3f3f3f"
+                graticuleLineWidth={0}
+                projectionScale={140}
                 legends={[
                   {
                     anchor: 'bottom-left',
                     direction: 'column',
                     justify: true,
                     translateX: -10,
-                    translateY: -220,
+                    translateY: -50,
                     itemsSpacing: 5,
                     itemWidth: 94,
                     itemHeight: 18,
