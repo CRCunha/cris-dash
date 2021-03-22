@@ -35,3 +35,9 @@ $ make run
 <img align="center" src="https://i.imgur.com/t35qaKl.png" width="400"> - 
 <img align="center" src="https://i.imgur.com/Mm8tzU7.png" width="400">
 
+***Some Componentes Exemples***
+
+<img align="center" src="https://i.imgur.com/oVVRti0.png" width="800"> -
+<img align="center" src="https://i.imgur.com/ZMFLpkT.png" width="800">
+
+
