@@ -1,7 +1,7 @@
 ## Plotting Data Charts
 <p align="center">
 <br><br/>
-<img align="center" src="https://i.imgur.com/PRraN1A.png">
+<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Altmetric_rgb_%28crop%29.png" width="220"> -
 <br><br/>
 <br><br/>
 </p>
