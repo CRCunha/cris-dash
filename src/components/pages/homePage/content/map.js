@@ -75,6 +75,7 @@ export default function Content() {
                 forceStrength={4}
                 simulationIterations={100}
                 colorBy="group"
+                colors={{ scheme: 'set2' }}
                 borderColor={{
                   from: 'color',
                   modifiers: [
