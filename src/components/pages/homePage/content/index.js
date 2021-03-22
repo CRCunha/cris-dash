@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { ResponsiveStream } from '@nivo/stream';
 import CardsTop from './cardsTop';
-import HomeBottomContent from './homeBottomContent';
+import Map from './map';
 import useStyles from './styles';
 
 export default function Content() {
@@ -115,7 +115,7 @@ export default function Content() {
                   ]}
                 />
               </Grid>
-              <HomeBottomContent />
+              <Map />
             </Grid>
           </Grid>
         </Grid>
