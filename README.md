@@ -38,6 +38,6 @@ $ make run
 ***Some Componentes Exemples***
 
 <img align="center" src="https://i.imgur.com/oVVRti0.png" width="800"> -
-<img align="center" src="https://i.imgur.com/ZMFLpkT.png" width="800">
-
+<img align="center" src="https://i.imgur.com/ZMFLpkT.png" width="800"> -
+<img align="center" src="https://i.imgur.com/TrLGzHD.png" width="800"> -
 
