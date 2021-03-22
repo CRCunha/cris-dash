@@ -22,6 +22,14 @@ export const setSwarmData = (data) => {
   return { type: '@app/SET_SWARM_DATA', data };
 };
 
+export const setLineData = (data) => {
+  return { type: '@app/SET_LINE_DATA', data };
+};
+
+export const setMapData = (data) => {
+  return { type: '@app/SET_MAP_DATA', data };
+};
+
 export const setLoading = (loading) => {
   return { type: '@app/SET_LOADING', loading };
 };

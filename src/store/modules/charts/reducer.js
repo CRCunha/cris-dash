@@ -6,7 +6,9 @@ const initialState = {
   waffle: [],
   swarm: [],
   radar: [],
+  line: [],
   pie: [],
+  map: [],
   loading: true,
 };
 
@@ -16,6 +18,18 @@ export default function charts(state = initialState, action) {
       // eslint-disable-next-line no-console
       return produce(state, (draft) => {
         draft.calendar = action.data;
+      });
+
+    case '@app/SET_LINE_DATA':
+      // eslint-disable-next-line no-console
+      return produce(state, (draft) => {
+        draft.line = action.data;
+      });
+
+    case '@app/SET_MAP_DATA':
+      // eslint-disable-next-line no-console
+      return produce(state, (draft) => {
+        draft.map = action.data;
       });
 
     case '@app/SET_STREAM_DATA':

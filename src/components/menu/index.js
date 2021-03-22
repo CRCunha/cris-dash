@@ -18,12 +18,17 @@ import RadarDataFile from '../../assets/data/radar.json';
 import WaffleDataFile from '../../assets/data/waffle.json';
 import ProcustDataFile from '../../assets/data/products.json';
 import SwarmDataFile from '../../assets/data/swarm.json';
+import MapDataFile from '../../assets/data/map.json';
 import useStyles from './styles';
 
 export default function Menu() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const userStates = useSelector((state) => state.user, []);
+
+  const setMapChartData = () => {
+    dispatch(ChartsActions.setMapData(MapDataFile));
+  };
 
   const setCalendarChartData = () => {
     dispatch(ChartsActions.setCalendarData(CalendarDataFile));
@@ -74,6 +79,7 @@ export default function Menu() {
     setRadarChartData();
     setWaffleChartData();
     setSwarmChartData();
+    setMapChartData();
   }, []);
 
   return (
