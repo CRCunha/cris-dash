@@ -29,7 +29,7 @@ $ make run
 
 ***Overview***
 
-<img align="center" src="https://i.imgur.com/L9kTj42.png" width="400"> - 
+<img align="center" src="https://i.imgur.com/22Y7pUE.png" width="400"> - 
 <img align="center" src="https://i.imgur.com/oIKgerm.png" width="400">
 
 <img align="center" src="https://i.imgur.com/t35qaKl.png" width="400"> - 
@@ -37,7 +37,7 @@ $ make run
 
 ***Some Componentes Exemples***
 
-<img align="center" src="https://i.imgur.com/oVVRti0.png" width="800"> -
+<img align="center" src="https://i.imgur.com/pDRCdR1.png" width="800"> -
 <img align="center" src="https://i.imgur.com/ZMFLpkT.png" width="800"> -
 <img align="center" src="https://i.imgur.com/TrLGzHD.png" width="800"> -
 <img align="center" src="https://i.imgur.com/qlnWmFi.png" width="800"> -
