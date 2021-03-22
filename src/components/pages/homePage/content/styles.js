@@ -30,8 +30,11 @@ const useStyles = makeStyles(() => ({
     borderRadius: 10,
     boxShadow: '0 20px 30px -16px rgba(9,9,16,0.03)',
   },
-  leftContentChart: {
-    height: 300,
+  swarm: {
+    height: 650,
+  },
+  mapChart: {
+    height: 650,
   },
   leftContentText: {
     display: 'flex',
