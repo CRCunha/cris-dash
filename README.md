@@ -24,7 +24,7 @@ The purpose of the platform is to create a fully modular panel to obtain a more 
 
 ```shell
 $ make install
-$ make run start
+$ make run
 ```
 
 ***Overview***
