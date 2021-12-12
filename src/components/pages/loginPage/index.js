@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import { Grid } from '@material-ui/core';
 import useStyles from './styles';
 import Content from './content';
