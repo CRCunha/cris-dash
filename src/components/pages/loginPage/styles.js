@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   gridContainer: {
@@ -6,7 +6,7 @@ const useStyles = makeStyles(() => ({
   },
   gridCardImage: {
     backgroundImage:
-      'url(https://cdn.dribbble.com/users/1188871/screenshots/15032885/media/da2ac7e4da41d8c2a22577bdd80f69a4.jpg)',
+      'url(https://blog.jetbrains.com/wp-content/uploads/2020/09/img2-1.png)',
     backgroundSize: 'cover',
   },
 }));
